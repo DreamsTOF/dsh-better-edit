@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-10-22
+
 ### Bug Fixes
 
 * **dsh:** follow the session's live working directory instead of the immutable creation header - a `working_directory` change now retargets relative-path resolution and the per-workspace store (the 0.2.1 `workingDirectory` service; the header stays as the pre-0.2.1 fallback) (#83)
