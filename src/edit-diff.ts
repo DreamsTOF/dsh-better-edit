@@ -127,7 +127,9 @@ export function genDiff(
         const tail = displayLines.slice(-contextLines);
         linesToShow = [...displayLines.slice(0, contextLines), ELLIPSIS_MARKER, ...tail];
         skipMiddle = displayLines.length - contextLines * 2;
-      } else if (linesToShow.length > contextLines) {
+      } else if (!nextPartIsChange && linesToShow.length > contextLines) {
+        // WHY: #166 — only trailing gaps may be sliced away silently; a middle gap renders whole
+        // WHY: below 2×context, otherwise hidden rows would desync the anchors that follow it.
         linesToShow = linesToShow.slice(0, contextLines);
       }
 
