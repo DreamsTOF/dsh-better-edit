@@ -13,17 +13,17 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-* **edit-diff:** formalize single-projection contract with counted span markers
+* **edit-diff:** formalize single-projection contract with counted span markers (#92)
 
 ### Bug Fixes
 
-* **edit-diff:** render ctx-0 middle gaps marker-only with correct skip
-* **edit-diff:** render small middle gaps whole, keep anchors aligned
+* **edit-diff:** render ctx-0 middle gaps marker-only with correct skip (#92)
+* **edit-diff:** render small middle gaps whole, keep anchors aligned (#92)
 
 ### Documentation
 
 * **agents:** replace CONTEXT with GLOSSARY single-context (#86)
-* **absorb:** record the upstream v2.3.0 gap-projection range — basis `b92e0ec`..`v2.3.0`, 3 semantic commits ported (`31d67d8` small middle gaps render whole with aligned anchors, `71e0107` single-projection contract with counted span markers, `ab06895` ctx-0 middle gaps marker-only with correct skip); the release commit `0925f1a` is deliberately not ported and no downstream version bump rides the absorb
+* **absorb:** record the upstream v2.3.0 gap-projection range — basis `b92e0ec`..`v2.3.0`, 3 semantic commits ported (`31d67d8` small middle gaps render whole with aligned anchors, `71e0107` single-projection contract with counted span markers, `ab06895` ctx-0 middle gaps marker-only with correct skip); the release commit `0925f1a` is deliberately not ported and no downstream version bump rides the absorb (#92)
 
 ## [1.1.0] - 2026-10-22
 
