@@ -11,6 +11,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-10-29
+
 ### Features
 
 * **edit-diff:** formalize single-projection contract with counted span markers (#92)
