@@ -218,3 +218,11 @@ _Avoid_: `agent.cordis.yml` (the pre-0.2 roster file), mode (the UI label)
 **Reset**:
 Restoring the compiled default guidance and order for an override file. Triggered by emptying an override file without a front-matter fence, deleting it, or deleting its whole `<preset>/` directory: the plugin renders the compiled default at agent creation and re-seeds at next boot — shipped presets always re-seed; a deleted custom-preset override stays absent (absence is no override).
 _Avoid_: restore, regenerate, "recover the default prompt"
+
+**source of truth**:
+The file bytes on disk plus the lease store (`served_leases`, snapshots, `line_lineage`) — the sole authority for retry coordinates. Rendered diff text is never the source of truth; coordinates resolve through leases, never by re-reading a projection.
+_Avoid_: machine diff (a projection, not the table)
+
+**projection**:
+The single shared rendered diff — preview, applied, and human display render the same text with different context params — derived from the source of truth under a stated collapse contract. Informational only: hidden spans come in two kinds, each with a unified counted marker whose count equals its hidden span — untouched-span (middle gap; ` ... [N lines untouched] ...`, every hidden row stays lease-covered, both cursors advance) and deleted-span (removed run; ` - ... [N lines deleted] ...`, the count drives the old-side cursor); added spans are never hidden (the collapse invariant). The model path never consumes projection text as coordinate input.
+_Avoid_: view (unqualified — name the audience), second diff (there is only one rendering), middle-gap marker (think spans, not gaps)
